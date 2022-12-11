@@ -24,13 +24,16 @@ const router = createBrowserRouter([
       {
         path: "/project",
         element: <Project></Project>,
-        loader: () => fetch("http://localhost:5000/project"),
+        loader: () =>
+          fetch("https://portfolio-server-orcin.vercel.app/project"),
       },
       {
         path: "/project/:id",
         element: <ProjectDetails></ProjectDetails>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/project/${params.id}`),
+          fetch(
+            `https://portfolio-server-orcin.vercel.app/project/${params.id}`
+          ),
       },
       {
         path: "/about",
