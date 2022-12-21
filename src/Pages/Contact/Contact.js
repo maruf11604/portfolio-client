@@ -40,17 +40,19 @@ const Contact = () => {
         <FontAwesomeIcon icon={faContactBook}></FontAwesomeIcon>
       </div>
       <hr />
-      <StyledContactForm>
-        <form ref={form} onSubmit={sendEmail}>
-          <label className="text-white">Name</label>
-          <input type="text" name="user_name" />
-          <label className="text-white">Email</label>
-          <input type="email" name="user_email" />
-          <label className="text-white">Message</label>
-          <textarea name="message" />
-          <input className="bg-sky-500" type="submit" value="Send" />
-        </form>
-      </StyledContactForm>
+      <div className="flex justify-center items-center">
+        <StyledContactForm>
+          <form ref={form} onSubmit={sendEmail}>
+            <label className="text-white">Name</label>
+            <input type="text" name="user_name" />
+            <label className="text-white">Email</label>
+            <input type="email" name="user_email" />
+            <label className="text-white">Message</label>
+            <textarea name="message" />
+            <input className="bg-sky-500" type="submit" value="Send" />
+          </form>
+        </StyledContactForm>
+      </div>
     </div>
   );
 };
